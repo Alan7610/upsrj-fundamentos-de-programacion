@@ -1,0 +1,13 @@
+{
+  "name": "Fundamentos C",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "runArgs": ["--init"],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-vscode.cpptools"
+  ],
+  "remoteUser": "vscode"
+}
