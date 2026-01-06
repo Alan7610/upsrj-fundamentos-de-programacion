@@ -12,8 +12,8 @@ Descripción: Documento principal del proyecto. Contiene instrucciones de instal
 
 # **Politécnica de Santa Rosa**
 
-- **Carrera: <carrera>**
-- **Materia: <materia>**
+- **Carrera: ITIID**
+- **Materia: Fundamentos de programación**
 - **Profesor:** Jesús Salvador López Ortega ([LinkedIn](https://www.linkedin.com/in/jesus-salvador-lopez-ortega/) | [GitHub](https://github.com/chucholoport))
 
 ---
