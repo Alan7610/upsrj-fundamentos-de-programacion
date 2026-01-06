@@ -1,69 +1,82 @@
-# **Título del Ejercicio**
+# Exercise 01 — Fundamentals of Programming in C
 
-# **Índice**
-- [**Título del Ejercicio**](#título-del-ejercicio)
-- [**Índice**](#índice)
-- [**Fecha de entrega**](#fecha-de-entrega)
-- [**Actividad de clase**](#actividad-de-clase)
-  - [Objetivos](#objetivos)
-  - [Pasos](#pasos)
-- [**Tarea**](#tarea)
-  - [Objetivos](#objetivos-1)
-  - [Pasos](#pasos-1)
-- [**Contacto**](#contacto)
+## Objectives
+1. **Calculate the area of a square** given the length of its side.
+2. **Calculate the volume of a cube** given the length of its side.
+
+This exercise helps practice:
+- Standard input and output in C (`scanf`, `printf`).
+- Variables and arithmetic operations.
+- Basic program organization.
 
 ---
 
-# **Fecha de entrega**
+## Instructions
 
-- Fecha de inicio:  00/00/00
-- Fecha de entrega: 00/00/00
-
-🔙 [Volver al índice](#índice)
-
----
-
-# **Actividad de clase**
-
-## Objetivos
-
-- Objetivo
-- Objetivo
-- Objetivo
-
-## Pasos
-
-1. Paso
-2. Paso
-3. Paso
-
-🔙 [Volver al índice](#índice)
+1. Create a file named `main.c` in the exercise folder.
+2. Write a C program that:
+   - Asks the user for the length of the side (integer or decimal).
+   - Calculates the area of the square:  
+     \[
+     \text{Area} = side \times side
+     \]
+   - Calculates the volume of the cube:  
+     \[
+     \text{Volume} = side \times side \times side
+     \]
+   - Prints both results to the screen.
 
 ---
 
-# **Tarea**
+## Example of Use
 
-## Objetivos
+### Input
+```
+Enter the side length: 5
+```
 
-- Objetivo
-- Objetivo
-- Objetivo
-
-## Pasos
-
-1. Paso
-2. Paso
-3. Paso
-
-🔙 [Volver al índice](#índice)
+### Output
+```
+Square area: 25
+Cube volume: 125
+```
 
 ---
 
-# **Contacto**
+## Compilation and Execution
 
-¿Dudas? Consulta los archivos de ayuda o pregunta a tu instructor.
+If you are inside the Docker container or VS Code DevContainer:
 
-**Autor:** Jesús Salvador López Ortega  
-[LinkedIn](https://www.linkedin.com/in/jesus-salvador-lopez-ortega/) | [GitHub](https://github.com/chucholoport) | [Correo Institucional](mailto:jlopez@upsrj.edu.mx)
+```bash
+gcc main.c -o exercise01
+./exercise01
+```
 
-🔙 [Volver al índice](#índice)
+---
+
+## Simple Diagram
+
+```
+Square (2D)              Cube (3D)
+
++---------+              +---------+
+|         |             /         /|
+|         |            +---------+ |
+|         |            |         | +
++---------+            |         |/
+                       +---------+
+```
+
+---
+
+## Reflective Questions
+
+1. What happens if the user enters a decimal number instead of an integer?  
+2. How should the program behave if the side length is negative?  
+3. Why might `float` or `double` be more useful than `int` for this program?
+
+---
+
+## Author
+- Jesús Salvador López Ortega [LinkedIn](https://www.linkedin.com/in/jesus-salvador-lopez-ortega/) | [GitHub](https://github.com/chucholoport) | [Correo Institucional](mailto:jlopez@upsrj.edu.mx)
+- Date: 01/05/2026
