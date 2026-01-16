@@ -1,82 +1,85 @@
-# Exercise 01 — Fundamentals of Programming in C
+# Práctica: Determinar si un número es par
 
-## Objectives
-1. **Calculate the area of a square** given the length of its side.
-2. **Calculate the volume of a cube** given the length of its side.
+## Objetivo
 
-This exercise helps practice:
-- Standard input and output in C (`scanf`, `printf`).
-- Variables and arithmetic operations.
-- Basic program organization.
+Desarrollar un programa en lenguaje C que determine si un número entero ingresado por el usuario es par o impar, haciendo uso de una **función definida por el alumno**.
 
 ---
 
-## Instructions
+## Descripción del problema
 
-1. Create a file named `main.c` in the exercise folder.
-2. Write a C program that:
-   - Asks the user for the length of the side (integer or decimal).
-   - Calculates the area of the square:  
-     \[
-     \text{Area} = side \times side
-     \]
-   - Calculates the volume of the cube:  
-     \[
-     \text{Volume} = side \times side \times side
-     \]
-   - Prints both results to the screen.
+Se debe crear un programa en C que lea un número entero desde la entrada estándar y determine si dicho número es **par**.
+
+La lógica para determinar si el número es par **no debe estar en `main`**, sino en una función independiente.
 
 ---
 
-## Example of Use
+## Especificaciones obligatorias
 
-### Input
-```
-Enter the side length: 5
+Tu programa **debe cumplir con todas** las siguientes especificaciones:
+
+1. Debes declarar una función llamada `is_even`.
+2. La función `is_even` debe devolver un valor de tipo `int`.
+3. La función `is_even` debe recibir **un parámetro de tipo `int`**.
+4. La función `is_even` debe devolver:
+
+   * `1` si el número recibido es par
+   * `0` si el número recibido **no** es par
+5. Debes modificar la función `main` para que:
+
+   * Invoque la función `is_even`
+   * Lea el número ingresado por el usuario desde la entrada estándar
+
+---
+
+## Comportamiento esperado
+
+Ejemplo de ejecución:
+
+```text
+Ingrese un numero: 6
+El numero es par
 ```
 
-### Output
-```
-Square area: 25
-Cube volume: 125
+```text
+Ingrese un numero: 9
+El numero es impar
 ```
 
 ---
 
-## Compilation and Execution
+## Archivos esperados
 
-If you are inside the Docker container or VS Code DevContainer:
+El proyecto debe contener:
+
+```text
+main.c
+```
+
+---
+
+## Compilación y ejecución
+
+El programa debe compilarse utilizando `gcc`.
 
 ```bash
-gcc main.c -o exercise01
-./exercise01
+gcc main.c
+./a.out
 ```
 
 ---
 
-## Simple Diagram
+## Criterios de evaluación
 
-```
-Square (2D)              Cube (3D)
-
-+---------+              +---------+
-|         |             /         /|
-|         |            +---------+ |
-|         |            |         | +
-+---------+            |         |/
-                       +---------+
-```
+| Criterio                              | Porcentaje |
+| ------------------------------------- | ---------- |
+| Cumple con todas las especificaciones | 50 %       |
+| Uso correcto de funciones             | 30 %       |
+| Lectura correcta del dato de entrada  | 20 %       |
 
 ---
 
-## Reflective Questions
+## Entregable
 
-1. What happens if the user enters a decimal number instead of an integer?  
-2. How should the program behave if the side length is negative?  
-3. Why might `float` or `double` be more useful than `int` for this program?
-
----
-
-## Author
-- Jesús Salvador López Ortega [LinkedIn](https://www.linkedin.com/in/jesus-salvador-lopez-ortega/) | [GitHub](https://github.com/chucholoport) | [Correo Institucional](mailto:jlopez@upsrj.edu.mx)
-- Date: 01/05/2026
+* Archivo fuente `main.c`
+* El programa debe compilar sin errores
