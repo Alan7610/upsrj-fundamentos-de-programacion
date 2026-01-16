@@ -52,3 +52,6 @@ instance/
 *.sqlite3
 
 *.log
+
+test/*.out
+test/*.o
