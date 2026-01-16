@@ -1,36 +1,26 @@
-name: Evaluación de pruebas
+name: C Practice - Even Number Test
 
 on:
   push:
     branches:
-      - develop
-      - 'feature/exercise**'
+      - main
+      - master
   pull_request:
-    branches:
-      - develop
-      - 'feature/exercise**'
 
 jobs:
-  test:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clonar repositorio
-      uses: actions/checkout@v4
-      with:
-        submodules: recursive
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Configurar entorno con Dev Container
-      uses: devcontainers/ci@v0.3
-      with:
-        runCmd: echo "Entorno listo para evaluación"
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential python3
 
-    - name: Ejecutar proyecto
-      uses: devcontainers/ci@v0.3
-      with:
-        runCmd: python src/main.py
-
-    - name: Ejecutar pruebas unitarias
-      uses: devcontainers/ci@v0.3
-      with:
-        runCmd: python tests/test_evaluation.py
+      - name: Run tests
+        run: |
+          cd test
+          python3 test_main.py
