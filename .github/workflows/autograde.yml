@@ -2,10 +2,9 @@ name: C Practice - Even Number Test
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [ "**" ]
   pull_request:
+    branches: [ "**" ]
 
 jobs:
   build-and-test:
