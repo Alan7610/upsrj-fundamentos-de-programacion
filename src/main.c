@@ -1,7 +1,22 @@
 #include <stdio.h>
 
-int main(int argc, char *argv)
+int is_even(int n)
 {
-    printf("Hello world!\n");
-    return 0;
+	return (n % 2 == 0) ? 1 : 0;
+}
+
+int main(void)
+{
+	int n;
+	printf("Ingrese un numero: ");
+	if (scanf("%d", &n) != 1) {
+		return 1;
+	}
+
+	if (is_even(n))
+		printf("El numero es par\n");
+	else
+		printf("El numero es impar\n");
+
+	return 0;
 }
